@@ -6,7 +6,7 @@ using TMPro;
 public class TextWritter : MonoBehaviour
 {
 
-    public float delay = 0.1f;
+    private float delay = .05f;
     public string text;
     private string currentText = "";
 
