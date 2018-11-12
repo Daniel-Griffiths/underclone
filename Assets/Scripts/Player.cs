@@ -21,28 +21,36 @@ public class Player : MonoBehaviour {
 	// Update is called once per frame
 	void FixedUpdate () {
         if (canMove) {
-            if (Input.GetKey("up") || Input.GetKey("w")) {
-                vertical = 1;
-                animator.SetBool("WalkUp",true);
-            } else if (Input.GetKey("down") || Input.GetKey("s")) {
-                vertical = -1;
-                animator.SetBool("WalkDown", true);
-            } else {
-                animator.SetBool("WalkUp", false);
-                animator.SetBool("WalkDown", false);
-                vertical = 0;
+            vertical = Input.GetAxisRaw("Vertical");
+            horizontal = Input.GetAxisRaw("Horizontal");
+            switch ((int) vertical) {
+                case (-1):
+                    animator.SetBool("WalkDown", true);
+                    animator.SetBool("WalkUp", false);
+                    break;
+                case (1):
+                    animator.SetBool("WalkUp", true);
+                    animator.SetBool("WalkDown", false);
+                    break;
+                default:
+                    animator.SetBool("WalkDown", false);
+                    animator.SetBool("WalkUp", false);
+                    break;
             }
 
-            if (Input.GetKey("left") || Input.GetKey("a")) {
-                horizontal = -1;
-                animator.SetBool("WalkLeft", true);
-            } else if (Input.GetKey("right") || Input.GetKey("d")) {
-                horizontal = 1;
-                animator.SetBool("WalkRight", true);
-            } else {
-                animator.SetBool("WalkLeft", false);
-                animator.SetBool("WalkRight", false);
-                horizontal = 0;
+            switch ((int)horizontal) {
+                case (-1):
+                    animator.SetBool("WalkLeft", true);
+                    animator.SetBool("WalkRight", false);
+                    break;
+                case (1):
+                    animator.SetBool("WalkRight", true);
+                    animator.SetBool("WalkLeft", false);
+                    break;
+                default:
+                    animator.SetBool("WalkLeft", false);
+                    animator.SetBool("WalkRight", false);
+                    break;
             }
         }
 
