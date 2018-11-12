@@ -278,7 +278,7 @@ SpriteRenderer:
   m_Size: {x: 2, y: 1.96}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &231997585
@@ -314,7 +314,7 @@ Animator:
   m_GameObject: {fileID: 231997583}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: b5982067f563c465ea4698f9340961e3, type: 2}
+  m_Controller: {fileID: 9100000, guid: 53825969e78121843902dd7072a612b7, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -829,7 +829,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ed76a4a7e92110448579a6cfbcc756d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 0.1
   text: 
 --- !u!1 &750807879
 GameObject:
