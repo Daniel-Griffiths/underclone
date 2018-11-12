@@ -124,7 +124,6 @@ public class BattleManager : MonoBehaviour {
             GameObject currentButton = buttons[i].instance;
 
             if (menuIndex == i) {
-                Debug.Log(menuIndex);
                 currentButton.GetComponent<SpriteRenderer>().sprite = buttons[i].spriteActive;
                 player.transform.position = new Vector2(
                     currentButton.transform.position.x - .15f,
